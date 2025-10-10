@@ -3,8 +3,11 @@
   "version": "1.0.0",
   "description": "Aplicação web SPA desenvolvida em **Next.js**, com foco em **CI/CD**, **TDD** e **boas \r práticas de versionamento**. \r ##  Tecnologias \r - Next.js 15+ - Node.js 20+ - Prisma ORM - MySQL (ou PostgreSQL) - Jest + React Testing Library - Docker (ambiente padronizado) \r ##  Estrutura do Projeto \r - `src/pages/api` → rotas da API RESTful \r - `src/components` → componentes reutilizáveis \r - `src/tests` → testes automatizados \r - `prisma/` → schema e migrations do banco de dados \r ##  Instalação \r ```bash \r git clone https://github.com/Miguelzzzz/pousada-pedra-furada.git \r cd pousada-pedra-furada \r npm install \r npm run dev",
   "main": "next.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": { 
+    "dev": "next dev", 
+    "build": "next build", 
+    "start": "next start", 
+    "test": "jest --watchAll" 
   },
   "keywords": [],
   "author": "Miguel Marcondes Loureiro",
@@ -16,5 +19,10 @@
   "bugs": {
     "url": "https://github.com/Miguelzzzz/pousada-pedra-furada/issues"
   },
-  "homepage": "https://github.com/Miguelzzzz/pousada-pedra-furada#readme"
+  "homepage": "https://github.com/Miguelzzzz/pousada-pedra-furada#readme",
+  "devDependencies": {
+    "@testing-library/react": "^16.3.0",
+    "jest": "^30.2.0",
+    "jest-environment-jsdom": "^30.2.0"
+  }
 }
