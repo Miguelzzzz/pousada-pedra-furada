@@ -13,10 +13,8 @@ export default function Header() {
     > 
       <h1>Pousada Pedra Furada</h1> 
       <nav> 
-        <Link to="/login" style={{ color: "#fff", marginRight: "1rem" 
-}}>Login</Link> 
-        <Link to="/tarefas" style={{ color: "#fff", marginRight: "1rem" 
-}}>Tarefas</Link> 
+        <Link to="/login" style={{ color: "#fff", marginRight: "1rem" }}>Login</Link> 
+        <Link to="/tarefas" style={{ color: "#fff", marginRight: "1rem" }}>Tarefas</Link> 
         <Link to="/relatorios" style={{ color: "#fff" }}>Relatórios</Link> 
       </nav> 
     </header> 
