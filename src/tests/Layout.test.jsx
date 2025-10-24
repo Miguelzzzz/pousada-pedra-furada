@@ -1,5 +1,6 @@
  import { render, screen } from "@testing-library/react"; 
 import Layout from "../components/Layout"; 
+
 jest.mock("../components/Header", () => () => <header>Mock Header</header>); 
 jest.mock("../components/Footer", () => () => <footer>Mock Footer</footer>); 
 

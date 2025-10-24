@@ -1,7 +1,6 @@
 import React, { useState } from "react"; 
 import { useNavigate } from "React-router-dom"; 
  
- 
 export default function LoginPage() { 
   const [usuario, setUsuario] = useState(""); 
   const [senha, setSenha] = useState(""); 
@@ -23,14 +22,12 @@ export default function LoginPage() {
       <form onSubmit={handleLogin}> 
         <label> 
           Usuário: 
-          <input type="text" value={usuario} onChange={(e) => 
-setUsuario(e.target.value)} /> 
+          <input type="text" value={usuario} onChange={(e) => setUsuario(e.target.value)} /> 
         </label> 
         <br /> 
         <label> 
           Senha: 
-          <input type="password" value={senha} onChange={(e) => 
-setSenha(e.target.value)} /> 
+          <input type="password" value={senha} onChange={(e) => setSenha(e.target.value)} /> 
         </label> 
         <br /> 
         <button type="submit">Entrar</button> 

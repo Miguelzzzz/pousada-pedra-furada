@@ -2,14 +2,12 @@ import { render, screen } from "@testing-library/react";
 import { MemoryRouter } from "React-router-dom"; 
 import App from "../App"; 
  
-// Mocka os componentes e páginas para testar apenas o roteamento 
 jest.mock("../components/Layout", () => ({ children }) => ( 
   <div data-testid="layout">{children}</div>)); 
  
 jest.mock("../pages/LoginPage.jsx", () => () => <div>Login Page Mock</div>); 
 jest.mock("../pages/TarefasPage.jsx", () => () => <div>Tarefas Page Mock</div>); 
-jest.mock("../pages/RelatoriosPage.jsx", () => () => <div>Relatórios Page 
-Mock</div>); 
+jest.mock("../pages/RelatoriosPage.jsx", () => () => <div>Relatórios Page Mock</div>); 
  
 describe("App.jsx — Roteamento principal da SPA", () => { 
   it("deve redirecionar '/' para '/login'", () => { 
@@ -18,6 +16,7 @@ describe("App.jsx — Roteamento principal da SPA", () => {
     ); 
     expect(screen.getByText("Login Page Mock")).toBeInTheDocument(); 
   }); 
+  
   it("deve renderizar a página de login ao acessar '/login'", () => { 
     render( 
       <MemoryRouter initialEntries={["/login"]}><App /></MemoryRouter> 
