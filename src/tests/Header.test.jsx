@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react"; 
-import { MemoryRouter } from "react-router-dom"; 
+import { MemoryRouter } from "React-router-dom"; 
 import Header from "../components/Headers.jsx"; 
  
 test("deve renderizar os links de navegação", () => { 

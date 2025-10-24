@@ -1,5 +1,5 @@
 import React from "react"; 
-import { Routes, Route, Navigate } from "react-router-dom"; 
+import { Routes, Route, Navigate } from "React-router-dom";
 import Layout from "./components/Layout.jsx"; 
 import LoginPage from "./pages/LoginPage.jsx"; 
 import TarefasPage from "./pages/TarefasPage.jsx"; 

@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react"; 
-import { MemoryRouter } from "react-router-dom"; 
+import { MemoryRouter } from "React-router-dom"; 
 import LoginPage from "../pages/LoginPage.jsx"; 
  
 test("deve exibir alerta se usuário ou senha estiverem vazios", () => { 
