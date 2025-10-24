@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"; 
 import Layout from "../components/Layout.jsx"; 
  
-jest.mock("../components/Headers.jsx", () => () => <header>Mock Header</header>); 
+jest.mock("../components/Header.jsx", () => () => <header>Mock Header</header>); 
  
 describe("Layout.jsx — Estrutura principal da aplicação", () => { 
   it("deve renderizar o Header, o conteúdo filho e o Footer", () => { 
