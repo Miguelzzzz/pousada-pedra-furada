@@ -1,5 +1,5 @@
 require("@testing-library/jest-dom");
-
+import { TextEncoder, TextDecoder } from "util"; 
 const originalWarn = console.warn; 
 
 console.warn = (...args) => { 
@@ -12,14 +12,5 @@ console.warn = (...args) => {
   originalWarn(...args); 
 };
 
-global.TextEncoder = class TextEncoder {
-  encode(input) {
-    return Buffer.from(input, "utf-8");
-  }
-};
-
-global.TextDecoder = class TextDecoder {
-  decode(input) {
-    return Buffer.from(input).toString("utf-8");
-  }
-};
+if (!global.TextEncoder) global.TextEncoder = TextEncoder; 
+if (!global.TextDecoder) global.TextDecoder = TextDecoder;
